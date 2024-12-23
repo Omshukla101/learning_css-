@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .box {
+    background-color: #e84949;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative; /* Needed for the positioning of ::before */
+    overflow: hidden;   /* To prevent the pseudo-element from overflowing */
+    z-index:1;
+  }
+
+  .container {
+    display: grid;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .box::before {
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scalex(0); /* Initially, the pseudo-element is not visible */
+    transform-origin:left; /* Ensure scaling happens from the left */
+    transition: transform 0.8s ; /* Smooth transition for the effect */
+    z-index:-1; /* Places the pseudo-element behind the box content */
+  }
+
+  .box:hover::before {
+    transform: scalex(1); 
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box">Hire me</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello on Each Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.rectangle {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: #fff;
+}
+
+span {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+}
+
+    </style>
+</head>
+<body>
+    <div class="rectangle">
+        <span class="top-left">Hello</span>
+        <span class="top-right">Hello</span>
+        <span class="bottom-left">Hello</span>
+        <span class="bottom-right">Hello</span>
+    </div>
+</body>
+</html>

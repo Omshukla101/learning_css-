@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+      background-color: black;
+      color: white;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      display: inline-block;
+      padding: 10px;
+      position: relative; /* Added to position dropdown correctly */
+    }
+
+    ul li:hover {
+      background-color: green;
+      color: white;
+    }
+
+    .dropdown {
+      display: none;
+      position:absolute; /* Positioned relative to the parent li */
+      top: 100%; /* Align dropdown below the parent li */
+      left: 0;
+      background-color: black;
+      width: 200px;
+    
+    }
+    ul{
+      float: right;
+    }
+
+    ul li:hover .dropdown {
+      display: block;
+      
+    }
+
+    .dropdown ul .dropdoun2{
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown li {
+      padding: 10px;
+      background-color: black;
+      color: white;
+      
+    }
+
+    .dropdown li:hover {
+      background-color: green;
+    }
+    .dropdoun2{
+    display:none;
+    position: absolute;
+    top: 100%; /* Align dropdown below the parent li */
+      left: 0;
+      background-color: black;
+      width: 200px;
+    }
+     .om :hover{
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Home</li>
+    <li>About Us</li>
+    <li>Courses
+      <div class="dropdown">
+        <ul>
+          <li>Spoken</li>
+          <li>Computer Software</li>
+          <li>Computer Hardware</li>
+          <li class="om">Coaching
+            <div class="dropdoun2">
+              <ul>
+                <li>om</li>
+                <li>shukla</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>Contact Us</li>
+  </ul>
+</body>
+</html>

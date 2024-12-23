@@ -1,0 +1,43 @@
+<!-- flexcontainer property.
+1- justify-content (move the row in main axis wise)
+2- align-item (move in the cross axis wise,(when we have single line))
+3- aligh-content(use when we have multipke line )
+3- flex-direction
+4- flex-wrap
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width", initial-scale=1.0">
+  <title>Document</title>
+ <style>
+ .container{
+  height: 80vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10px;
+  
+ }
+ .box{
+   height: 96px;
+   width: 96px;
+   background-color: antiquewhite;
+   /* display: flex;
+   justify-content: center;
+  align-items: center; */
+ }
+ </style>
+</head>
+<body>
+  <div class="container">
+  <div class="box">box-1</div>
+  <div class="box">box-2</div>
+  <div class="box">box-3</div>
+  <div class="box">box-4</div></div>
+</body>
+</html>

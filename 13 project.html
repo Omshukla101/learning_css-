@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my gellary</title>
+   <link rel="icon" type="image" href="">
+   
+   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #wrapper{
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    html,body{
+      font-family: "poppins","sans-serif";
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container{
+      height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1{
+     margin:20px 0;
+     text-align: center;
+     margin-bottom: 20px;
+     font-size: 3rem;
+    }
+    .gallery{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+    }
+    .card{
+      width: 32%;
+      position: relative;
+      margin-bottom:10px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card img{
+      height: 100%;
+      width: 100%;
+      filter: grayscale(100%);
+      box-shadow: 0 0 20px #333;
+      object-fit: cover;
+
+    }
+    .card:hover{
+      transform: scale(1.03);
+      filter: drop-shadow(0 0 10px #333);
+      transition: 0.3s;
+    }
+    .card:hover img{
+      filter: grayscale(0%);
+
+    }
+    .card figcaption{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      padding: 25px;
+      width: 100%;
+      height: 20%;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      opacity: 0;
+      background: linear-gradient(0deg,rgba(0,0,0,0.5) 0%, rgba(225,225,225,0) 100%);
+      transition: 0.3s;
+
+    }
+    .card:hover figcaption{
+      opacity: 1;
+      transform: scale(1.03);
+    }
+   </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="container">
+    <h1>my gallery</h1>
+     <div class="gallery">
+      <figure class="card">
+        <img src="https://media.gettyimages.com/id/1311356176/photo/modern-luxury-home-interior.jpg?s=612x612&w=0&k=20&c=aAl2273jMoFxiDcU-ahN57Ky84dbxuOYgdzwN1-Pdpk=" alt="">
+         <figcaption>image1</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://www.impressiveinteriordesign.com/wp-content/uploads/2018/05/Transitional-Living-Room-by-Emdesign.jpg" alt="">
+         <figcaption>image2</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://st.hzcdn.com/fimgs/pictures/bedrooms/2011-dream-home-bedroom-at-merchandise-mart-michael-abrams-interiors-img~b12130d20e27066e_5182-1-ca31d8a-w360-h360-b0-p0.jpg" alt="">
+         <figcaption>image3</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/202411/this-holiday-home-blends-design-elements-of-kerala-and-rajasthan/title-unique-house-design.jpg" alt="">
+         <figcaption>image4</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://www.italianbark.com/wp-content/uploads/2017/05/beautiful-home-puglia-italian-interiors-italianbark-8-1024x717.jpg" alt="">
+         <figcaption>image5</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://media.gettyimages.com/id/1333060261/photo/modern-living-room-interior-design.jpg?s=612x612&w=0&k=20&c=4P4Ke-N4n8wk4xOpwCVw5HGwFVFi5GEOavQSaepbKOE=" alt="">
+         <figcaption>image6</figcaption>
+      </figure>
+
+         <figure class="card">
+          <img src="https://cdn.pixabay.com/photo/2022/08/02/17/13/autumn-7360811_640.jpg" alt="">
+           <figcaption>image7</figcaption>
+         </figure>
+           <figure class="card">
+            <img src="https://cdn.pixabay.com/photo/2019/11/12/15/47/leaves-4621334_640.jpg" alt="">
+             <figcaption>image8</figcaption>
+           </figure>
+             <figure class="card">
+              <img src="https://images.unsplash.com/photo-1656366631858-6d5ba6f5a58c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlJTIwYWVzdGhldGljfGVufDB8fDB8fHww" alt="">
+               <figcaption>image9</figcaption>
+             </figure>
+     </div>
+  </div>
+</body>
+</html>
